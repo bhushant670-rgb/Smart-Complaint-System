@@ -8,7 +8,6 @@ It handles complaint submission, storage, and management.
 - Python (Flask)
 - MySQL
 - HTML, CSS, JavaScript
-- 
 ## Database
 Database schema is provided in database.sql
 
