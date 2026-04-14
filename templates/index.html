@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Smart Hostel</title>
+
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+
+
+<body>
+
+<img src="{{url_for('static',filename='logo.jpeg')}}" class="logo">
+
+<h1>SMART HOSTEL</h1>
+
+<h2>Complaint System</h2>
+
+
+<div class="box">
+    <form action="/complaint" autocomplete="off" method="POST">
+
+      <input type="text" name="name" autocomplete="off" placeholder="Your Name" id="name">
+
+      <br><br>
+
+      <input type="text" name="room" autocomplete="off" placeholder="Room Number" id="room">
+
+      <br><br>
+
+      <input type="text" name="hostel" autocomplete="off" placeholder="Hostel name" id="Hostel">
+
+      <br><br>
+
+      <input type="text" name="floor" autocomplete="off" placeholder="Floor" id="Floor">
+
+      <br><br>
+
+      <input type="text" name="block" autocomplete="off" placeholder="Hostel Block" id="HOstel Block">
+
+      <br><br>
+
+      <input type="text" name="complaint" autocomplete="off" placeholder="Complaint" id="complaint">
+
+      <br><br>
+
+      <button onclick="submitComplaint()">
+
+      Submit Complaint
+
+      </button>
+    </form>
+</div>
+
+<script src="{{url_for('static',filename='script.js')}}"></script>
+
+</body>
+
+</html>

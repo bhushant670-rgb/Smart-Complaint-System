@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Login</title>
+
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+
+<body>
+
+<img src="{{url_for('static',filename='logo.jpeg')}}" class="logo">
+
+<h1>SMART HOSTEL</h1>
+
+<h2>Login</h2>
+
+<div class="box">
+    <form action="/login" autocomplete="off" method="POST">
+
+       <input type="text" id="username" name="email" autocomplete="off" placeholder="College Email">
+
+       <br><br>
+
+       <input type="password" id="password" name="password" autocomplete="off" placeholder="Password">
+
+       <br><br>
+
+       <a href="complaint.html">
+       <button>Login</button>
+       </a>
+    </form>
+</div>
+
+<script src="{{url_for('static',filename='script.js')}}"></script>
+
+</body>
+
+</html>
+ 
