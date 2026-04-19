@@ -11,6 +11,11 @@ It handles complaint submission, storage, and management.
 ## Database
 Database schema is provided in database.sql
 
+## Database Deployment
+- MySQL database is hosted on Railway (cloud)
+- Enables remote access and multi-user connectivity
+- Backend connects using Railway environment variables
+
 ## Features
 - User login system
 - Complaint submission
