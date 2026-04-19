@@ -1,21 +1,13 @@
-CREATE DATABASE college;
-
-USE college;
-
-CREATE TABLE users(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(100) UNIQUE,
-    password VARCHAR(100)
-);
-
-CREATE TABLE complaint(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    room INT,
-    hostel VARCHAR(100),
-    floor INT,
-    block VARCHAR(50),
-    complaint TEXT,
-    email VARCHAR(100),
-    UNIQUE(email, room)
+ create table complaint (
+    id int auto_increment primary key,
+    name varchar(100),
+    room int,
+    hostel varchar(100),
+    floor int,
+    block varchar(50),
+    complaint text,
+    email varchar(100),
+    status varchar(20) default 'Pending',
+    created_at datetime default current_timestamp,
+    updated_at datetime default current_timestamp on update current_timestamp
 );
