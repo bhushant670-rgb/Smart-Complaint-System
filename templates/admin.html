@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 <head>
@@ -22,21 +22,22 @@
 <th>name</th>
 <th>room</th>
 <th>complaint</th>
+<th>email</th>
 <th>status</th>
 </tr>
 
 {% for row in data %}
 <tr>
-    <td>{{row[0] }}</td>
+    <td>{{row[0]}}</td>
     <td>{{row[1]}}</td>
     <td>{{row[2]}}</td>
     <td>{{row[6]}}</td>
-    <td>{{row[8]}}</td>
+    <td>{{row[7]}}</td>
 <td>
   {% if row[8] == 'pending' %}
     pending
   {% else %}
-    Resolved
+   Resolve
   {% endif %}
 </td>
 
