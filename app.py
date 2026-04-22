@@ -1,18 +1,22 @@
- from flask import Flask, request, render_template, redirect, url_for, session
-
+from flask import Flask, request, render_template, redirect, url_for, session
+from urllib.parse import urlparse
 import mysql.connector as c
+from dotenv import load_dotenv
 import os
-
+load_dotenv()
+ 
 app=Flask(__name__)
 app.secret_key="abc123"
 
 def get_db_connection():
+  url=os.getenv("MYSQL_PUBLIC_URL")
+  parsed=urlparse(url)
   return c.connect(
-    host=os.getenv("mysql.railway.internal"),
-    user=os.getenv("root"),
-    password=os.getenv("omEKbYmspiRMFdcTtHDzvxhfqWdIyQuZ"),
-    database=os.getenv("railway"),
-    port=int(os.getenv("3306"))
+   host=parsed.hostname,
+   user=parsed.username,
+   password=parsed.password,
+   database=parsed.path[1:],
+   port=parsed.port
   )
 
 @app.route('/')
