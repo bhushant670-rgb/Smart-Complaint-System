@@ -28,7 +28,7 @@ def login():
     email=request.form ["email"]
     password=request.form ["password"]
     session['users']=email
-    if email == "admin@gmail.com" and password == " 257":
+    if email == "admin@gmail.com" and password == "257":
       return redirect(url_for('admin'))
     else:
       return redirect(url_for('complaint_page'))
